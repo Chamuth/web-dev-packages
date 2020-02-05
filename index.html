@@ -186,8 +186,6 @@
             font-size:16px;
             display:flex;
             justify-content:center;
-            padding-top:15px;
-            padding-bottom:15px;
             align-items: center;
             transition:all 250ms;
         }
@@ -207,6 +205,23 @@
             color:black;
         }
 
+        .call-to-action .actions
+        {
+            display:flex;
+            flex-direction:row;
+            width:100%;
+        }
+
+        .call-to-action .actions .action-item
+        {
+            flex:1;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            padding-top:15px;
+            padding-bottom:15px;
+        }
+
         .call-to-action .fa
         {
             margin-right:15px;
@@ -220,8 +235,8 @@
 
         .call-to-action:hover
         {
-            padding-top:20px;
-            padding-bottom:20px;
+            padding-top:5px;
+            padding-bottom:5px;
             opacity:0.9;
         }
 
@@ -236,6 +251,25 @@
         {
             font-size:14px;
             opacity:0.8;
+            text-decoration:none !important;
+            color:white;
+        }
+
+        .package.first .actions a, .package.second .actions a
+        {
+            text-decoration:none;
+            color:white;
+        }
+
+        .package.third .actions a
+        {
+            color:black;
+            text-decoration:none;
+        }
+
+        .package.third .actions .number
+        {
+            color:black;
         }
     </style>
 </head>
@@ -302,15 +336,28 @@
                     </div>
                 </div>
 
-                <a href="tel:+94773874216">
-                    <div class="call-to-action">
-                        <i class="fa fa-phone"></i>
-                        <div class="action-text">
-                            <span class="action">Call Now</span>
-                            <span class="number">+94 773 874 216</span>
+                <div class="call-to-action">
+                    <div class="actions">
+                        <div class="action-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+94773874216">
+                                <div class="action-text">
+                                    <span class="action">Call Now</span>
+                                    <span class="number">+94 773 874 216</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="action-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+94773874216">
+                                <div class="action-text">
+                                    <span class="action">Call Now</span>
+                                    <span class="number">+94 777 512 337</span>
+                                </div>
+                            </a>    
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
 
             <div class="package second">
@@ -384,15 +431,28 @@
                     </div>
                 </div>
 
-                <a href="tel:+94773874216">
-                    <div class="call-to-action">
-                        <i class="fa fa-phone"></i>
-                        <div class="action-text">
-                            <span class="action">Call Now</span>
-                            <span class="number">+94 773 874 216</span>
+                <div class="call-to-action">
+                    <div class="actions">
+                        <div class="action-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+94773874216">
+                                <div class="action-text">
+                                    <span class="action">Call Now</span>
+                                    <span class="number">+94 773 874 216</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="action-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+94773874216">
+                                <div class="action-text">
+                                    <span class="action">Call Now</span>
+                                    <span class="number">+94 777 512 337</span>
+                                </div>
+                            </a>    
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
 
             <div class="package third">
@@ -474,15 +534,30 @@
                     </div>
                 </div>
 
-                <a href="tel:+94773874216">
-                    <div class="call-to-action">
-                        <i class="fa fa-phone"></i>
-                        <div class="action-text">
-                            <span class="action">Call Now</span>
-                            <span class="number">+94 773 874 216</span>
+                
+                <div class="call-to-action">
+                    <div class="actions">
+                        <div class="action-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+94773874216">
+                                <div class="action-text">
+                                    <span class="action">Call Now</span>
+                                    <span class="number">+94 773 874 216</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="action-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+94773874216">
+                                <div class="action-text">
+                                    <span class="action">Call Now</span>
+                                    <span class="number">+94 777 512 337</span>
+                                </div>
+                            </a>    
                         </div>
                     </div>
-                </a>
+                </div>
+
             </div>
 
         </div>
