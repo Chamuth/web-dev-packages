@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Packages</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        .centered
+        {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translateX(-50%) translateY(-50%);
+        }
+
+        .packages
+        {
+            font-family: 'Fira Sans', sans-serif;
+            font-size:25px;
+            display:flex;
+            flex-direction:row;
+            width:1050px; 
+            position:relative;
+        }
+
+        .packages .package
+        {
+            flex:1;
+            overflow:hidden;
+            border-radius:8px;
+            border:1px solid #ccc;
+            height:750px;
+            position:relative;
+            margin-left:10px;
+            margin-right:10px;
+        }
+        
+        .package .package-ribbon
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:10px;
+            color:white;
+            text-align:center;
+        }
+
+        .package.first .package-ribbon
+        {
+            background-color:#f55;
+        }
+        .package.second .package-ribbon
+        {
+            background-color:#008ddf;
+        }
+        .package.third .package-ribbon
+        {
+            background-color:#ffbb00;
+        }
+
+        .package .package-details
+        {
+            position:absolute;
+            top:25px;
+            left:20px;
+            width:100%;
+        }
+
+        .package-details .package-name
+        {
+            font-size:20px;
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        .package.first .package-details .package-name
+        {
+            color:#f55;
+        }
+        .package.second .package-details .package-name
+        {
+            color:#008ddf;
+        }
+        .package.third .package-details .package-name
+        {
+            color:#ffbb00;
+        }
+
+        .package-details .package-description
+        {
+            font-size:15px;
+            display:block;
+            opacity:0.65;
+        }
+
+        .package-details .package-icon
+        {
+            position:absolute;
+            right:40px;
+            top:8px;
+            color:white;
+            border-radius:50%;
+            width:35px;
+            height:35px;
+        }
+
+        .package.first .package-details .package-icon
+        {
+            background-color:#f55;
+        }
+        .package.second .package-details .package-icon
+        {
+            background-color:#008ddf;
+        }
+        .package.third .package-details .package-icon
+        {
+            background-color:#ffbb00;
+            color:black;
+            opacitY:0.9;
+        }
+
+        .package-icon i
+        {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translateX(-50%) translateY(-48%);
+            font-size:18px;
+        }
+
+        .package .package-features
+        {
+            position:absolute;
+            top:115px;
+            width:100%;
+            left:0;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .package-features .feature
+        {
+            padding: 0 20px;
+            font-size:18px;
+            display:flex;
+            flex-direction:row;
+            margin-bottom:15px;
+        }
+
+        .package.first .feature .fa-check
+        {
+            color:#f55;
+        }
+        .package.second .feature .fa-check
+        {
+            color:#008ddf;
+        }
+        .package.third .feature .fa-check
+        {
+            color:#ffbb00;
+        }
+
+        .feature .feature-text
+        {
+            margin-left:20px;
+            flex:1;
+            font-size:15px;
+        }
+
+        .package .call-to-action
+        {
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            color:white;
+            font-size:16px;
+            display:flex;
+            justify-content:center;
+            padding-top:15px;
+            padding-bottom:15px;
+            align-items: center;
+            transition:all 250ms;
+        }
+        
+        .package.first .call-to-action
+        {
+            background-color:#f55;
+        }
+
+        .package.second .call-to-action
+        {
+            background-color:#008ddf;
+        }
+        .package.third .call-to-action
+        {
+            background-color:#ffbb00;
+            color:black;
+        }
+
+        .call-to-action .fa
+        {
+            margin-right:15px;
+        }
+
+        .call-to-action .action-text
+        {
+            display:flex;
+            flex-direction:column;
+        }
+
+        .call-to-action:hover
+        {
+            padding-top:20px;
+            padding-bottom:20px;
+            opacity:0.9;
+        }
+
+        .action-text .action
+        {
+            font-size:15px;
+            margin-bottom:2px;
+            font-weight:bold;
+        }
+
+        .action-text .number
+        {
+            font-size:14px;
+            opacity:0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <div class="packages">
+            
+            <div class="package first">
+                <div class="package-ribbon"></div>
+
+                <div class="package-details">
+                    <span class="package-name">Standard</span>
+                    <span class="package-description">Static Web Development</span>
+
+                    <div class="package-icon">
+                        <i class="fa fa-home"></i>
+                    </div>
+                </div>
+
+                <div class="package-features">
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Free <b>.COM or .LK</b> Domain Name</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Static Web Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Upto <b>5</b> HTML Pages</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Photo Gallery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Basic Search Engine Optimization</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Social Media Pages</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Responsive Web Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Contact Form</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Google Translate Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Google Maps Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Mobile Friendly Design</span>
+                    </div>
+                </div>
+
+                <a href="tel:+94773874216">
+                    <div class="call-to-action">
+                        <i class="fa fa-phone"></i>
+                        <div class="action-text">
+                            <span class="action">Call Now</span>
+                            <span class="number">+94 773 874 216</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="package second">
+                <div class="package-ribbon"></div>
+
+                <div class="package-details">
+                    <span class="package-name">Business</span>
+                    <span class="package-description">Static Web Development</span>
+
+                    <div class="package-icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                </div>
+
+                <div class="package-features">
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Free <b>.COM or .LK</b> Domain Name</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Static Web Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Upto <b>5</b> HTML Pages</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Photo Gallery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Basic Search Engine Optimization</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Social Media Pages</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Email Accounts</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">SSL Certificate</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Google Analytics Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Live Chat Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Free Logo Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Google Translate Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Google Maps Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Mobile Friendly Design</span>
+                    </div>
+                </div>
+
+                <a href="tel:+94773874216">
+                    <div class="call-to-action">
+                        <i class="fa fa-phone"></i>
+                        <div class="action-text">
+                            <span class="action">Call Now</span>
+                            <span class="number">+94 773 874 216</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="package third">
+                <div class="package-ribbon"></div>
+
+                <div class="package-details">
+                    <span class="package-name">Premium</span>
+                    <span class="package-description">Dynamic Web Development</span>
+
+                    <div class="package-icon">
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="package-features">
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Free <b>.COM or .LK</b> Domain Name</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text"><b>Node.js / PHP</b></span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Single Page Application</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">e-Commerce Apps</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">User Management (Login)</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Payment Gateway Integration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Search Engine Optimization</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Website Search</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Email Accounts</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">CMS (Wordpress / Joomla)</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">SSL Certificate</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Google Analytics</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Live Chat + AI Chatbots</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Localization</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Mobile Friendly Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-check"></i>
+                        <span class="feature-text">Free Logo Design</span>
+                    </div>
+                </div>
+
+                <a href="tel:+94773874216">
+                    <div class="call-to-action">
+                        <i class="fa fa-phone"></i>
+                        <div class="action-text">
+                            <span class="action">Call Now</span>
+                            <span class="number">+94 773 874 216</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
